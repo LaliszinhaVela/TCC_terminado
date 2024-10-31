@@ -18,7 +18,7 @@ enpoints.get('/listar/atendimentos/continuo',autenticar, async (req,resp) => {
 })
 
 
- //teste
+ 
  enpoints.get('/VA',autenticar, async (req,resp) => {
     try {
         let DA = req.query.atendimento
@@ -32,8 +32,7 @@ enpoints.get('/listar/atendimentos/continuo',autenticar, async (req,resp) => {
     }
 })
 
- //teste
-
+ 
 
 
 

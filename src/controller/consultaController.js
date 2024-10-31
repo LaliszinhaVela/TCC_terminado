@@ -21,7 +21,7 @@ enpoints.get('/verificar/consulta',autenticar, async (req,resp) => {
 })
 
 
- //teste
+ 
  enpoints.get('/VC',autenticar, async (req,resp) => {
     try {
         let DC = req.query.DC
@@ -35,8 +35,7 @@ enpoints.get('/verificar/consulta',autenticar, async (req,resp) => {
     }
 })
 
- //teste
-
+ 
 
 
 

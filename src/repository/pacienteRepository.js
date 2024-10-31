@@ -18,7 +18,7 @@ export async function listarP(nome){
     return registros
 }
 
- //teste
+
 
  export async function VP(DP){
     const comando = `
@@ -34,7 +34,7 @@ export async function listarP(nome){
     return registros
 }
 
- //teste
+
 
 export async function cadastrarPacientes(paciente){
     const comando = `

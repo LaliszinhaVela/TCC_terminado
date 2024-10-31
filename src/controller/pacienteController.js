@@ -20,7 +20,7 @@ enpoints.get('/listar/pacientes',autenticar, async (req,resp) => {
 })
 
 
- //teste
+ 
  enpoints.get('/VP',autenticar, async (req,resp) => {
     try {
         let DP = req.query.DP
@@ -34,7 +34,7 @@ enpoints.get('/listar/pacientes',autenticar, async (req,resp) => {
     }
 })
 
- //teste
+ 
 
 
 

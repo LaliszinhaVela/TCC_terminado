@@ -16,7 +16,7 @@ export async function listarC(consulta){
     return registros
 }
 
- //teste
+
  export async function VC(DC){
     const comando = `
      select *
@@ -30,8 +30,7 @@ export async function listarC(consulta){
     return registros
 }
 
- //teste
-
+ 
 
 
 

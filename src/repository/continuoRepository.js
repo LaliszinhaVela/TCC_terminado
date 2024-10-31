@@ -18,7 +18,7 @@ export async function listarA(atendimento){
 }
 
 
- //teste
+ 
 
  export async function VA (DA){
     const comando = `
@@ -33,7 +33,7 @@ export async function listarA(atendimento){
     return registros
 }
 
- //teste
+
 
 export async function cadastrarAtendimentos(continuo){
     const comando = `
