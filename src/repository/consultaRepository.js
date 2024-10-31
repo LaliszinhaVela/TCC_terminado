@@ -8,7 +8,7 @@ export async function listarC(consulta){
     from tb_paciente as paciente
     inner join tb_consulta as consulta
     on paciente.id_paciente = consulta.id_paciente
-    where nm_paciente like CONCAT('%', ? , '%');
+    where nm_paciente like CONCAT( ? , '%');
 
     `
     let resp = await con.query(comando,[consulta])
@@ -16,7 +16,38 @@ export async function listarC(consulta){
     return registros
 }
 
+ //teste
+ export async function VC(DC){
+    const comando = `
+     select *
+     from tb_consulta as consulta
+     inner join tb_atendimentocontinuo as continuo
+     on consulta.id_consulta = continuo.id_continuo
+    where dt_consulta_horario like CONCAT( ?, '%');
+    `
+    let resp = await con.query(comando,[DC])
+    let registros = resp[0]
+    return registros
+}
 
+ //teste
+
+
+
+
+export async function listarD(data){
+    const comando = `
+    select*
+    from tb_paciente as paciente
+    inner join tb_consulta as consulta
+    on paciente.id_paciente = consulta.id_paciente
+    where nm_paciente like CONCAT( ? , '%');
+
+    `
+    let resp = await con.query(comando,[data])
+    let registros = resp[0]
+    return registros
+}
 
 
 export async function agendarConsulta(consulta){

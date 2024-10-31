@@ -21,6 +21,23 @@ enpoints.get('/verificar/consulta',autenticar, async (req,resp) => {
 })
 
 
+ //teste
+ enpoints.get('/VC',autenticar, async (req,resp) => {
+    try {
+        let DC = req.query.DC
+         let registros = await db.VC(DC)
+         resp.send(registros)
+
+    } catch (err) {
+        resp.status(404).send({
+            error: err.message
+        })
+    }
+})
+
+ //teste
+
+
 
 
 

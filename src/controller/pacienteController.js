@@ -20,6 +20,21 @@ enpoints.get('/listar/pacientes',autenticar, async (req,resp) => {
 })
 
 
+ //teste
+ enpoints.get('/VP',autenticar, async (req,resp) => {
+    try {
+        let DP = req.query.DP
+         let registros = await db.VP(DP)
+         resp.send(registros)
+
+    } catch (err) {
+        resp.status(404).send({
+            error: err.message
+        })
+    }
+})
+
+ //teste
 
 
 

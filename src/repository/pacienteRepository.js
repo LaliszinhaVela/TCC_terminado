@@ -10,7 +10,7 @@ export async function listarP(nome){
     from tb_paciente as paciente
     inner join tb_consulta as consulta
     on paciente.id_paciente = consulta.id_paciente
-    where nm_paciente like CONCAT('%', ? , '%');
+    where nm_paciente like CONCAT(? , '%');
 
     `
     let resp = await con.query(comando,[nome])
@@ -18,9 +18,23 @@ export async function listarP(nome){
     return registros
 }
 
+ //teste
 
+ export async function VP(DP){
+    const comando = `
+     select *
+     from tb_consulta as consulta
+     inner join tb_atendimentocontinuo as continuo
+     on consulta.id_consulta = continuo.id_continuo
+     where dt_consulta_horario like CONCAT( 2, '%');
 
+    `
+    let resp = await con.query(comando,[DP])
+    let registros = resp[0]
+    return registros
+}
 
+ //teste
 
 export async function cadastrarPacientes(paciente){
     const comando = `

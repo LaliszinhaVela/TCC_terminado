@@ -18,6 +18,25 @@ enpoints.get('/listar/atendimentos/continuo',autenticar, async (req,resp) => {
 })
 
 
+ //teste
+ enpoints.get('/VA',autenticar, async (req,resp) => {
+    try {
+        let DA = req.query.atendimento
+         let registros = await db.VA(atendimento)
+         resp.send(registros)
+
+    } catch (err) {
+        resp.status(404).send({
+            error: err.message
+        })
+    }
+})
+
+ //teste
+
+
+
+
 
 enpoints.post('/inserir/atendimento/continuo',autenticar, async (req,resp) => {
     try {
