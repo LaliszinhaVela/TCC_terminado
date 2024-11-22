@@ -5,11 +5,11 @@ export async function validarLogin (login) {
     const comando = `
     select
       id_usuario id,
-      nm_usuario nome
+      nr_usuario nome
     from tb_login
     where
-     nm_usuario = ?
-     and nr_senha = ?
+     nr_usuario = ?
+     and nr_password = ?
     `;
 
     let registros = await con.query(comando,[login.nome,login.senha])
